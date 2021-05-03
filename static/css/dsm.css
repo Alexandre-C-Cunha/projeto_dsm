@@ -1,0 +1,20 @@
+body  {
+    background-image: url("/static/img/image001_opacidade.png");
+}
+
+
+.logo{
+	width: 35%;
+	margin: 5px;
+	
+}
+
+.navbar{
+	padding: 15px 10px;
+	background: #00a0b7;
+	border: none;
+	width: 40%
+	border-radius: 0;
+	margin-bottom: 40px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
