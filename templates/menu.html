@@ -1,0 +1,55 @@
+{% extends "base2.html" %}
+	{% block cabecalho %}
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='css/dsm2.css') }}">
+	<title>Colunas e linhas</title>
+	{% endblock %}
+	{% block container %}
+	<div class="row">
+		<div class="col-lg-2">
+			<aside class="flex-shrink-1">
+            <nav class="navbar navbar-expand flex-md-column flex-row align-items-start py-2">
+                <div class="collapse navbar-collapse ">
+                    <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
+                    	<li class="nav-item">
+                            <a class="nav-link pl-0 text-dark" href="/home"><img class="logo" src="/static/img/logotipo_datasciencemineral-06.png" id="logotipo"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0 text-dark" href="/mapa"><img class="logo" src="/static/img/icones_menu-02.png" id="icon_mapa"> <span class="font-weight-bold">Mapa</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0 text-dark" href="/info"><img class="logo" src="/static/img/icones_menu-04.png" id="icon_info"> <span class="font-weight-bold">Artigos</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0 text-dark" href="/export"><img class="logo" src="/static/img/icones_menu-06.png" id="icon_export"> <span class="font-weight-bold">Info</span></a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+		</div>
+		<div class="col-lg-10">
+			<form class="d-flex">
+		        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+		        <button class="btn btn-outline-success text-dark" type="submit">Search</button>
+	      	</form>
+			{%block area_comum%}
+			{%endblock%}
+            <p>
+            	<br>
+            </p>
+        </div>
+		<div class="w-100"></div>
+  		<div class="col">
+  			 <footer class="bg-light text-center text-lg-start">
+			  <!-- Copyright -->
+			  <div class="text-light text-center p-3" style="background-color: rgba(8, 8, 8, 8);">
+			    © 2021 Copyright:
+			    <a class="text-light" href="https://cetem.gov.br/">EGP/CETEM- Centro de Tecnologia Mineral</a>
+			  </div>
+			  <!-- Copyright -->
+			</footer>
+			<!-- Footer -->
+  		</div>
+	</div>
+	{% endblock %}

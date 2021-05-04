@@ -1,0 +1,38 @@
+
+  .btn{
+    background: #00a0b7;
+  }
+
+  .navbar{
+    background: #00a0b7;
+  }
+  .navbar-expand{
+    background: #00a0b7;
+  }
+
+
+
+  #logotipo{
+    max-width: 120px;
+    width: 100%;
+    margin-left: 6%;
+
+  }
+
+
+  #icon_mapa{
+    max-width: 60px;
+    width: 100%;
+  }
+
+
+  #icon_info{
+    max-width: 60px;
+    width: 100%;
+  }
+
+
+  #icon_export{
+    max-width: 60px;
+    width: 100%;
+  }
