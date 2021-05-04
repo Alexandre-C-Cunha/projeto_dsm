@@ -1,4 +1,20 @@
 {% extends "flebox.html" %}
 {%block area_comum%}
+
 <h2>Painel da Mineração</h2>
+<div class="row">
+  <div class="col-md"><img class="logo" src="/static/img/graf colunas.png" id="png_colunas"></div>
+  	<div class="col-md">
+  		<canvas id="myChart"></canvas>
+	</div>
+  <div class="w-100"></div>
+  <div class="col-md"><img class="logo" src="/static/img/ticket.png" id="png_ticket"></div>
+  <div class="col-md"><img class="logo" src="/static/img/tabela.png" id="png_tabela"></div>
+  <div class="w-100"></div>
+  <div class="col-md"><img class="logo" src="/static/img/mapa.png" id="png_mapa"></div>
+  <div class="col-md"><img class="logo" src="/static/img/graf barras.png" id="png_barras"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+<script src="{{ url_for('static', filename='js/line_chart.js') }}"></script>
 {%endblock%}

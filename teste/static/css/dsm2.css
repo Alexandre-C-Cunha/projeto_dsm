@@ -36,3 +36,29 @@
     max-width: 60px;
     width: 100%;
   }
+
+
+  #png_barras{
+    width: 100%;
+  }
+
+  #png_mapa{
+    width: 100%;
+  }
+
+  #png_colunas{
+    width: 70%;
+  }
+
+  #png_tabela{
+    width: 70%;
+  }
+
+  #png_ticket{
+    width: 70%;
+  }
+
+  #myChart{
+    width: 80%!important; 
+    height:100%!important;
+  }

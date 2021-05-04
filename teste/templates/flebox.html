@@ -1,6 +1,9 @@
 {% extends "base2.html" %}
 	{% block cabecalho %}
 	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='css/dsm2.css') }}">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<script src="{{ url_for('static', filename='js/select2.js') }}"></script>
 	<title>Colunas e linhas</title>
 	{% endblock %}
 	{% block container %}
@@ -30,12 +33,17 @@
 		</div>
 		<div class="col-lg-10">
 			<form class="d-flex">
-		        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+		        <select class="js-example-basic-multiple form-control me-2" name="states[]" multiple="multiple">
+				  <option value="AL">Alabama</option>
+				    ...
+				  <option value="WY">Wyoming</option>
+				</select>
 		        <button class="btn btn-outline-success text-dark" type="submit">Search</button>
 	      	</form>
 			{%block area_comum%}
 			{%endblock%}
             <p>
+            	<br>
             	<br>
             </p>
         </div>
