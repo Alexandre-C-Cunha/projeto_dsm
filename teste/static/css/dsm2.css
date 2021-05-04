@@ -1,0 +1,13 @@
+nav.sidebar.navbar {
+    border-radius: 0px;
+    background:#222;
+  }
+
+  .btn {
+  background-color: #222;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
