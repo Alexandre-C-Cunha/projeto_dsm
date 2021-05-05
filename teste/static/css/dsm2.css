@@ -19,6 +19,22 @@
 
   }
 
+  #coluna1{
+    background: #000708;
+  }
+
+  #coluna2{
+    background: #000708;
+  }
+
+  #coluna3{
+    background: #000708;
+  }
+
+  #coluna4{
+    background: #000708;
+  }
+
 
   #icon_mapa{
     max-width: 60px;
@@ -58,7 +74,12 @@
     width: 70%;
   }
 
-  #myChart{
-    width: 80%!important; 
+  #lineChart{
+    width: 90%!important; 
+    height:100%!important;
+  }
+
+#barChart{
+    width: 90%!important; 
     height:100%!important;
   }
