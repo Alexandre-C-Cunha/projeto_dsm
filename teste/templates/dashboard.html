@@ -1,7 +1,9 @@
 {% extends "flebox.html" %}
 {%block area_comum%}
 
-<h2>Painel da Mineração</h2>
+<div id="nome_principal">
+    <h1>Data Science Mineral</h1>
+</div>
 <div class="row">
   <div id="coluna1" class="col-md">
   	<canvas id="barChart"></canvas>
@@ -10,12 +12,28 @@
   		<canvas id="lineChart"></canvas>
 	</div>
   <div class="w-100"></div>
-  <div id="coluna3" class="col-md"><img class="logo" src="/static/img/ticket.png" id="png_ticket"></div>
+  <div id="coluna3" class="col-md">
+  	<table id="ticket" class="table table-sm table-borderless">
+		  <thead class="thead-dark">
+		  	<tr>
+		  		<th scope="col" colspan="2">Números Gerais da Mineração em 2020</th>
+		    </tr>
+		    <tr>
+		    	<td class="ticket">Substâncias <img class="logo" src="/static/img/quimica2.png" id="png_quimica"><p class="valores">1230</p></td>
+		    	<td class="ticket">Empresas<img class="logo" src="/static/img/min.png" id="png_empresa"><p class="valores">1230</p></td>
+		    </tr>
+		    <tr>
+		    	<td class="ticket">Estados <img class="logo" src="/static/img/estados.png" id="png_estado"><p class="valores">1230</p></td>
+		    	<td class="ticket">Municípios <img class="logo" src="/static/img/municipios.png" id="png_municipio"><p class="valores">1230</p></td>
+		    </tr>
+		</thead>
+	</table>
+  </div>
   <div id="coluna4" class="col-md">
-  	<table class="table table-sm table-dark">
-	  <thead>
+  	<table class="table table-sm table-bordered">
+	  <thead class="thead-dark">
 	    <tr>
-	      <th scope="col">#</th>
+	      <th scope="col">ID</th>
 	      <th scope="col">First</th>
 	      <th scope="col">Last</th>
 	      <th scope="col">Handle</th>
@@ -36,20 +54,31 @@
 	    </tr>
 	    <tr>
 	      <th scope="row">3</th>
-	      <td colspan="2">Larry the Bird</td>
+	      <td>Larry the Bird</td>
+	      <td>Celtics</td>
 	      <td>@twitter</td>
 	    </tr>
 	    <tr>
 	      <th scope="row">4</th>
-	      <td colspan="2">Larry the Bird</td>
+	      <td>Larry the Bird</td>
+	      <td>Celtics</td>
+	      <td>@twitter</td>
+	    </tr>
+	    <tr>
+	      <th scope="row">5</th>
+	      <td>Larry the Bird</td>
+	      <td>Celtics</td>
+	      <td>@twitter</td>
+	    </tr>
+	    <tr>
+	      <th scope="row">6</th>
+	      <td>Larry the Bird</td>
+	      <td>Celtics</td>
 	      <td>@twitter</td>
 	    </tr>
 	  </tbody>
 	</table>
 </div>
-  <div class="w-100"></div>
-  <div class="col-md"><img class="logo" src="/static/img/mapa.png" id="png_mapa"></div>
-  <div class="col-md"><img class="logo" src="/static/img/graf barras.png" id="png_barras"></div>
 </div>
 
 {%endblock%}
