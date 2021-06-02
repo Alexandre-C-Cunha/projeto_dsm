@@ -1,0 +1,19 @@
+entra primeiro no envoirement
+
+dsm_projeto\Scripts\activate 
+depois na pasta cd flask_professional
+
+depois faço um git status
+
+git add -A
+
+
+git commit -m "o que houve na mudança"
+
+depois salva no github
+
+git push -u origin main
+
+nome: Alexandre-C-Cunha
+
+senha:troquei hahahahah burro!

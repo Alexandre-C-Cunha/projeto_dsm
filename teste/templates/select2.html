@@ -1,0 +1,14 @@
+{% extends "flebox2.html" %}
+{%block area_comum%}
+	<form class="d-flex">
+		<select class="js-example-basic-multiple form-control me-2" name="states[]" multiple="multiple">
+			{% for index,row in df.iterrows() %}
+				<option value="{{index}}">{{ row['NOME'] }}</option>
+		  	{% endfor %}
+		</select>
+		<button class="btn btn-outline-success text-dark" type="submit">Search</button>
+	</form>
+	
+		<p>{{x}}</p>
+	
+{%endblock%}
