@@ -1,11 +1,11 @@
-{% extends "flebox2.html" %}
+{% extends "flebox3.html" %}
 {%block area_comum%}
 	{% set marcador = 0 %}
 	<form class="d-flex">
 		<select class="js-data-example-ajax form-control me-2" multiple="multiple"></select>
 		<button class="btn btn-outline-success text-dark" type="submit">Search</button>
 	</form>
-	<p>{{Sfiltro2}}</p>
+	<p id="valor_geral">{{Sfiltro2}}</p>
 		
 	
 {%endblock%}

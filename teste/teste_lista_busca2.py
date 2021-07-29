@@ -8,6 +8,7 @@ from memory_profiler import profile
 from flask import jsonify, json, current_app as app
 import wtforms as wt
 from wtforms import TextField, Form
+from ModuloBusca import ListadeBusca, Listando_item_escolha
 
 app = Flask(__name__)
 client = MongoClient('mongodb://localhost:27017/')
@@ -34,7 +35,7 @@ def acentuacao(x):
     target = normalize('NFKD', source).encode('ASCII','ignore').decode('ASCII')
     return(target)
 
-
+df_lista_busca=pd.read_pickle('C:/Users/vanes/Documents/projeto MIM/BeautifulSoup/Projeto IMP/Base de Dados/Notebook/df_lista_de_busca_final_rev1.pickle')
 df_lista=pd.read_json('static\\data\\api.jason')
 df_lista['NOME']=df_lista['NOME'].apply(lambda x: acentuacao(x).upper())
 df_lista=df_lista.drop_duplicates()
@@ -44,8 +45,9 @@ def rota_jason():
 	termo = request.args.get('term')
 	a=acentuacao(termo).upper()
 	df_term=df_lista[df_lista['NOME'].str.contains(a)]
+	df_term2=df_lista_busca[df_lista_busca['Nome_lista'].str.contains(a)]
 	lista_amarradinho=[]
-	for index, row in df_term.iterrows():
+	for index, row in df_term2.iterrows():
 		lista_amarradinho.append({'id':index,'text':row['NOME']+" ("+row['TIPO']+")"})
 	final={'results':lista_amarradinho}
 	with open('static\\data\\lista_amarradinho.json', 'w') as outfile:
@@ -58,10 +60,10 @@ def rota_jason():
 def rota_escolha(todas):
 	global Sfiltro2
 	Sfiltro2 = str(todas)
-	busca_banco=Sfiltro2.split(' (')[0]
-	print(busca_banco)
-	print(len(empresas_cfem.distinct("cnpj",{"municipio": busca_banco})))
-	print(Sfiltro2)
+	info_item=Listando_item_escolha()
+	item2=Sfiltro2.split(',')[0]
+	item3=info_item.item_categoria(item2, df_lista_busca)[0]
+	print(info_item.razao_social(item3,cnpj_basico,cnpj_completo,todos_cnpj,empresas_cfem,codigo_municipio,operacao,codigo_cnae,natureza_juridica))
 	return jsonify({'Sfiltro2':Sfiltro2})
 
 @app.route('/home/')
